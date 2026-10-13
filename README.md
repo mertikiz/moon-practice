@@ -5,6 +5,9 @@ alıp, gerçek NASA verisiyle bir **Ay haritası web uygulaması** yapıyoruz ve
 arama (A\*)** ekliyoruz. Amaç: takım olarak birlikte çalışmayı, entegrasyonu ve araçları öğrenmek.
 **Bu repo yarışma projesi değildir.**
 
+> **İlk kez mi geliyorsun?** Önce kurulum rehberi:
+> [`mars-drills/KURULUM.md`](https://github.com/mertikiz/mars-drills/blob/main/KURULUM.md).
+>
 > Ajanlar ve takım: kurallar [`AGENTS.md`](AGENTS.md) içinde. Plan ve kararlar özel planlama reposunda
 > (`nasa-space-apps-2026`): `README.md` → `docs/notes/plan-current.md` → `docs/notes/prep-plan.md`.
 
