@@ -28,7 +28,8 @@ Her oturumda **farklı biri** oturumu yönetir ve `main`'e birleştirir (merge).
 Her veri seti için `sablonlar/veri-karti.md` şablonuyla bir **veri kartı** doldurun.
 
 ## Çalışma şekli
-- Her iş için **kendi dalında** (branch) çalış, küçük commit'ler, sonra pull request; oturum yöneticisi birleştirir.
+- **`main` korumalı** (doğrudan push yok). Her iş için **kendi dalında** (branch) çalış, küçük commit'ler, sonra pull
+  request; oturum yöneticisi birleştirir.
 - **"Açıklayamadığın kodu birleştirme."** Yapay zekânın yazdığı her değişikliği oku ve çalıştırıp dene.
 - Yapay zekâ kullanımını kısa bir kayda yaz (tarih, araç, ne için, nasıl doğrulandı); asıl projede beyan edeceğiz.
 

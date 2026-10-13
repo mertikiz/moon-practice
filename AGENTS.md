@@ -30,3 +30,13 @@ Bu repoda çalışan **tüm yapay zekâ ajanları** (Google Antigravity, Claude 
    kopyalanmaz (NASA'nın "14 Kasım 09:00'dan önce projeye başlama" kuralı). Genel kurulum kodu kaynak gösterilerek
    kullanılabilir.
 8. İşin sonunda kısaca özetle: hangi dosyalar değişti, hangi komutlar çalıştı, sonuç ne, eksik ne.
+
+## GitHub kuralları
+- **`main` korumalı:** doğrudan push edilemez. Her iş için **yeni bir dal** aç (ör. `sprint2-deprem-katmani`), küçük
+  commit'ler at, sonra **pull request** aç. O oturumun yöneticisi (session lead) inceleyip birleştirir (merge).
+- Pull request açıklamasına yaz: ne değişti, nasıl test edildi, yapay zekâ kullanıldıysa ne için.
+- Dalda çalışmaya başlamadan önce `main`'i çek (`git pull`), sonra dalını güncel tut.
+- **Asla** force-push yapma, push edilmiş geçmişi yeniden yazma, başkasının dalını silme.
+- **Repo ayarları, görünürlük (özel/açık), işbirlikçiler, dal koruması ve repo silme sahibine (Mert) aittir.**
+  Ajanlar bunlara dokunmaz.
+- Sadece çalıştırıp kontrol ettiğin işi push et (`npm run build` geçmeli).
