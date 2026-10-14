@@ -34,11 +34,20 @@ Bu repoda çalışan **tüm yapay zekâ ajanları** (Google Antigravity, Claude 
    kopyalanmaz (NASA'nın "14 Kasım 09:00'dan önce projeye başlama" kuralı). Genel kurulum kodu kaynak gösterilerek
    kullanılabilir.
 8. İşin sonunda kısaca özetle: hangi dosyalar değişti, hangi komutlar çalıştı, sonuç ne, eksik ne.
+9. **Commit'ten önce değişiklik özeti:** `git status` ve `git diff --stat` sonucunu göster. Görevle ilgisiz bir dosya
+   değiştiyse ya da mevcut bir kod silindiyse bunu açıkça söyle ve geri almayı öner.
+10. **İki deneme kuralı:** aynı hatayı iki denemede çözemezsen dur. Ne denediğini, hatanın tam metnini ve bir sonraki
+    küçük adımı yaz, kullanıcıdan yön iste; körlemesine denemeye devam etme.
+11. **Anlat:** iş bitince yazdığın kodun ne yaptığını kısa ve Türkçe anlat (hangi dosya ne yapıyor, veri nereden gelip
+    nereye gidiyor). Kullanıcı sorarsa satır satır açıkla. Amaç: kullanıcı kodu jüriye kendisi anlatabilsin.
+12. **Pull request açıklamasını sen doldur:** `.github/pull_request_template.md` şablonunu kullan; "Yapay zekâ
+    kullanımı" bölümüne aracı, modeli ve ne yaptığını yaz. "Kodu okudum, ne yaptığını anlatabilirim" kutusunu
+    **işaretleme**; onu kullanıcı işaretler.
 
 ## GitHub kuralları
 - **`main` korumalı:** doğrudan push edilemez. Her iş için **yeni bir dal** aç (ör. `sprint2-deprem-katmani`), küçük
   commit'ler at, sonra **pull request** aç. O oturumun yöneticisi (session lead) inceleyip birleştirir (merge).
-- Pull request açıklamasına yaz: ne değişti, nasıl test edildi, yapay zekâ kullanıldıysa ne için.
+- Pull request açıklaması `.github/pull_request_template.md` şablonuyla açılır; ajan doldurur (kural 12), kişi kontrol eder.
 - Dalda çalışmaya başlamadan önce `main`'i çek (`git pull`), sonra dalını güncel tut.
 - **Asla** force-push yapma, push edilmiş geçmişi yeniden yazma, başkasının dalını silme.
 - **Repo ayarları, görünürlük (özel/açık), işbirlikçiler, dal koruması ve repo silme sahibine (Mert) aittir.**
