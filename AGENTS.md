@@ -10,10 +10,14 @@ Bu repoda çalışan **tüm yapay zekâ ajanları** (Google Antigravity, Claude 
 ## Bu repo ne?
 - NASA Space Apps 2026 hazırlığı için **takım pratik projesi**: gerçek NASA verisiyle bir **Ay haritası web
   uygulaması** + yürüyüş rotası araçları + A\* ile rota arama. Yarışma projesi **değil**.
-- Teknoloji: **React + Vite + Leaflet** (web). Veri hazırlama için `scripts/` altında küçük **Python** betikleri.
-  Rota arama için açık kaynak bir A\* kütüphanesi (ör. EasyStar.js, MIT).
-- Moon Trek karoları eşit dikdörtgen (equirectangular) ızgarada: Leaflet'te **`crs: L.CRS.EPSG4326`** kullan.
-  Koordinatlar: GeoJSON **[boylam, enlem]**.
+- Teknoloji: **React + Vite + TypeScript**, harita **OpenLayers + proj4**, arayüz **Tailwind + shadcn/ui**, grafik
+  **Recharts**, durum (state) önce React'in kendisiyle (gerekirse Zustand), kontrol **ESLint + Prettier + Vitest**,
+  yayın **Cloudflare Pages**. Veri hazırlama için `scripts/` altında küçük **Python** betikleri. Rota arama için açık
+  kaynak bir A\* kütüphanesi (ör. EasyStar.js, MIT).
+- Moon Trek karoları eşit dikdörtgen (equirectangular) ızgarada: OpenLayers'ta katmanı Trek'in `WMTSCapabilities.xml`
+  dosyasından kur (`optionsFromCapabilities`), Ay koordinat sistemini proj4 ile tanımla. Koordinatlar: GeoJSON
+  **[boylam, enlem]**. Haritayı React içinde **bir kez** oluştur (ref + effect); her render'da yeniden kurma.
+- Paket sürümlerini `package.json`'dan kontrol et; farklı OpenLayers sürümlerinin örneklerini karıştırma.
 
 ## Kurallar
 1. **Önce plan göster**, onay al, sonra değiştir. Küçük, anlaşılır adımlarla ilerle.

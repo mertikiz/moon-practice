@@ -14,7 +14,7 @@ arama (A\*)** ekliyoruz. Amaç: takım olarak birlikte çalışmayı, entegrasyo
 ## Sprintler (haftada ~2 saatlik ortak oturum)
 | Sprint | Hafta | Ne yapıyoruz |
 |---|---|---|
-| 1 | 20–26 Ekim | React + Vite + Leaflet ile **Ay haritası**, yayında (Moon Trek karoları) |
+| 1 | 20–26 Ekim | React + Vite + TypeScript + OpenLayers ile **Ay haritası**, Cloudflare Pages'te yayında (Moon Trek karoları) |
 | 2 | 27 Ekim–2 Kasım | Apollo **deprem istasyonları ve depremler** katman olarak (pin, açılır bilgi, tarih) |
 | 3 | 3–6 Kasım | **Rota araçları:** yol çiz, uzunluk (Ay yarıçapıyla), yükseklik profili, yürüme süresi |
 | 4 | 3–6 Kasım | **Rota arama:** (a) A\*'ı bir kez elle düz bir ızgarada yaz; (b) Python ile gerçek Ay yükseklik verisinden küçük bir **eğim maliyet ızgarası** (~100×100) üret → JSON; (c) açık kaynak bir A\* kütüphanesi (ör. EasyStar.js, MIT) en ucuz yolu bulsun, haritada çiz |
@@ -24,7 +24,7 @@ Her oturumda **farklı biri** oturumu yönetir ve `main`'e birleştirir (merge).
 ## Veri kaynakları
 | Ne | Kaynak | Durum |
 |---|---|---|
-| Ay temel haritası | Moon Trek karoları, ör. `https://trek.nasa.gov/tiles/Moon/EQ/LRO_WAC_Mosaic_Global_303ppd_v02/1.0.0/WMTSCapabilities.xml` (karo ızgarası için bu dosyayı oku) · Leaflet'te `crs: L.CRS.EPSG4326` | ✅ çalışıyor, tarayıcıdan erişilebilir (CORS) |
+| Ay temel haritası | Moon Trek karoları, ör. `https://trek.nasa.gov/tiles/Moon/EQ/LRO_WAC_Mosaic_Global_303ppd_v02/1.0.0/WMTSCapabilities.xml` (OpenLayers'ta `optionsFromCapabilities` ile oku; Ay koordinat sistemini proj4 ile tanımla) | ✅ çalışıyor, tarayıcıdan erişilebilir (CORS) |
 | Apollo deprem verisi | NASA PDS arşivi (Apollo pasif sismik deney) | ⚠️ doğrulanacak (sprint 2'de) |
 | Ay yükseklik/eğim (LOLA) | NASA LRO LOLA ürünleri | ⚠️ doğrulanacak (sprint 4'te) |
 
