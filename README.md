@@ -8,8 +8,8 @@ arama (A\*)** ekliyoruz. Amaç: takım olarak birlikte çalışmayı, entegrasyo
 > **İlk kez mi geliyorsun?** Önce kurulum rehberi:
 > [`mars-drills/KURULUM.md`](https://github.com/mertikiz/mars-drills/blob/main/KURULUM.md).
 >
-> Ajanlar ve takım: kurallar [`AGENTS.md`](AGENTS.md) içinde. Plan ve kararlar özel planlama reposunda
-> (`nasa-space-apps-2026`): `README.md` → `docs/notes/plan-current.md` → `docs/notes/prep-plan.md`.
+> Ajanlar ve takım: kurallar [`AGENTS.md`](AGENTS.md) içinde. Plan ve kararlar özel takım reposunda
+> (`space-apps-2026-team`): `README.md` → `docs/notes/plan-current.md` → `docs/notes/prep-plan.md`.
 
 ## Sprintler (haftada ~2 saatlik ortak oturum)
 | Sprint | Hafta | Ne yapıyoruz |
