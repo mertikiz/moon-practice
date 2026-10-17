@@ -11,22 +11,27 @@ arama (A\*)** ekliyoruz. Amaç: takım olarak birlikte çalışmayı, entegrasyo
 > Ajanlar ve takım: kurallar [`AGENTS.md`](AGENTS.md) içinde. Plan ve kararlar özel takım reposunda
 > (`space-apps-2026-team`): `README.md` → `docs/notes/plan-current.md` → `docs/notes/prep-plan.md`.
 
-## Sprintler (haftada ~2 saatlik ortak oturum)
-| Sprint | Hafta | Ne yapıyoruz |
-|---|---|---|
-| 1 | 20–26 Ekim | React + Vite + TypeScript + OpenLayers ile **Ay haritası**, Cloudflare Pages'te yayında (Moon Trek karoları) |
-| 2 | 27 Ekim–2 Kasım | Apollo **deprem istasyonları ve depremler** katman olarak (pin, açılır bilgi, tarih) |
-| 3 | 3–6 Kasım | **Rota araçları:** yol çiz, uzunluk (Ay yarıçapıyla), yükseklik profili, yürüme süresi |
-| 4 | 3–6 Kasım | **Rota arama:** (a) A\*'ı bir kez elle düz bir ızgarada yaz; (b) Python ile gerçek Ay yükseklik verisinden küçük bir **eğim maliyet ızgarası** (~100×100) üret → JSON; (c) açık kaynak bir A\* kütüphanesi (ör. EasyStar.js, MIT) en ucuz yolu bulsun, haritada çiz |
+## Plan: tek birleşik sprint (7–9 Kasım)
+Vizeler yüzünden (24 Ekim–6 Kasım proje yok) haftalık dört sprint yerine **7–9 Kasım'da tek bir ortak oturum**
+(4–5 saat) var. Güncel tarihler: [takvim (GitHub Projects)](https://github.com/users/mertikiz/projects/1), issue: "Ay
+projesi: birleşik sprint". Sıra:
 
-Her oturumda **farklı biri** oturumu yönetir ve `main`'e birleştirir (merge). Roller provadan sonra belirlenecek.
+| Adım | Ne yapıyoruz |
+|---|---|
+| 1 | React + Vite + TypeScript + OpenLayers ile **Ay haritası**, Cloudflare Pages'te yayında (Moon Trek karoları) |
+| 2 | Apollo **deprem istasyonları ve depremler** katman olarak (pin, açılır bilgi, tarih) |
+| 3 | **Rota araçları:** yol çiz, uzunluk (Ay yarıçapıyla), yükseklik profili, yürüme süresi |
+| 4 | **Rota arama:** Python ile gerçek Ay yükseklik verisinden küçük bir **eğim maliyet ızgarası** (~100×100) → JSON; açık kaynak bir A\* kütüphanesi (ör. EasyStar.js, MIT) en ucuz yolu bulsun, haritada çiz. (Elle A\* yazma adımı çıkarıldı.) |
+
+Her adım kendi branch'inde, PR ile; oturumu bir kişi yönetir ve `main`'e birleştirir (merge). Roller provadan sonra
+belirlenecek. Zaman kalmazsa sıra 4 → 3 → 2 diye kısılır; 1 her durumda yapılır.
 
 ## Veri kaynakları
 | Ne | Kaynak | Durum |
 |---|---|---|
 | Ay temel haritası | Moon Trek karoları, ör. `https://trek.nasa.gov/tiles/Moon/EQ/LRO_WAC_Mosaic_Global_303ppd_v02/1.0.0/WMTSCapabilities.xml` (OpenLayers'ta `optionsFromCapabilities` ile oku; Ay koordinat sistemini proj4 ile tanımla) | ✅ çalışıyor, tarayıcıdan erişilebilir (CORS) |
-| Apollo deprem verisi | NASA PDS arşivi (Apollo pasif sismik deney) | ⚠️ doğrulanacak (sprint 2'de) |
-| Ay yükseklik/eğim (LOLA) | NASA LRO LOLA ürünleri | ⚠️ doğrulanacak (sprint 4'te) |
+| Apollo deprem verisi | NASA PDS arşivi (Apollo pasif sismik deney) | ⚠️ doğrulanacak (adım 2'de) |
+| Ay yükseklik/eğim (LOLA) | NASA LRO LOLA ürünleri | ⚠️ doğrulanacak (adım 4'te) |
 
 Her veri seti için `sablonlar/veri-karti.md` şablonuyla bir **veri kartı** doldurun.
 
